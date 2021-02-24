@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>To do list</title>
+        <style>
+            .sup {text-decoration: none; color: red;}
+            .mod {text-decoration: none; color: blue;}
+        </style>
+    </head>
+
+    <body>
+        <h1>Modify a task</h1>
+
+        <form action="/todo/modify/" method="post">
+            <p>
+                <label for="newtodo">Modify </label>
+                <input type="text" id="idx" name="idx" value="<%= index %>" hidden/>
+                <input type="text" name="newtodo" id="newtodo" autofocus value="<%= todolist[index].description %>"/>
+                <input type="text" name="priority" id="priority" maxlength="1" size="1" value="<%= todolist[index].priority %>"/>
+                <input type="submit" />
+            </p>
+        </form>
+    </body>
+</html>
